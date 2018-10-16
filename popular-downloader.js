@@ -10,7 +10,7 @@ request('https://reddit.com/r/popular.json', (err, response, body) => {
     if (err) console.log(err);
     let articles = JSON.parse(body)
     
-    /* Pushing data to popularArticles Array */
+  /*Writing files to downloads folder */
  
     articles.data.children.forEach(each => {
         if (path.extname(each.data.url)) {
